@@ -144,6 +144,7 @@ public class Letters {
 		S.AddValidNextLetter(K);
 		S.AddValidNextLetter(L);
 		S.AddValidNextLetter(M);
+		S.AddValidNextLetter(N);
 		S.AddValidNextLetter(P);
 		S.AddValidNextLetter(R);
 		S.AddValidNextLetter(T);
@@ -156,6 +157,11 @@ public class Letters {
 		//V
 		V.AddValidNextLetter(R);
 		V.AddValidNextLetter(L);
+		
+		//W
+		W.AddValidNextLetter(H);
+		W.AddValidNextLetter(N);
+		W.AddValidNextLetter(R);
 		
 		//X
 		X.AddValidNextLetter(T);
