@@ -36,7 +36,7 @@ public class WordGenerator {
 		
 		
 		System.out.println("\n\nHere are " + WordCount + " word(s) that starts with " + FirstLetter.GetChar() + " : \n");
-		for (int i = 0; i < WordCount; i++) {System.out.println((i+1) + ") " + FirstLetter.GetChar() + MG.Generate(new Random().nextInt(MaxLength+1)+MinLength,FirstLetter));}
+		for (int i = 0; i < WordCount; i++) {System.out.println((i+1) + ") " + FirstLetter.GetChar() + MG.Generate(FirstLetter));}
 		
 		System.out.println("\nHere is a super word, "+ Superword +" characters long: \n");
 		System.out.println(MG.Generate(Superword));
@@ -57,12 +57,24 @@ public class WordGenerator {
 	public String Generate() {return Generate(new Random().nextInt(MaxLength+1)+MinLength);}
 	
 	/**
+	 * Generates word of random length between the created bounds starting with the specified letter
+	 * @param FirstLetter
+	 * @return
+	 */
+	public String Generate(Letter FirstLetter) {
+		LetterTypeCount=1;
+
+		//Start this cosa with a random first letter.
+		return Generate(Math.max(new Random().nextInt(MaxLength+1),MinLength),FirstLetter);
+	}
+	
+	/**
 	 * Generates a word of specified length.
 	 * @param length
 	 * @return
 	 */
 	public String Generate(int length) {
-		LetterTypeCount=0;
+		LetterTypeCount=1;
 		
 		//Start this cosa with a random first letter.
 		return Generate(length,Letters.ALL_LETTERS[new Random().nextInt(Letters.ALL_LETTERS.length)]);

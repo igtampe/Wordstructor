@@ -11,9 +11,9 @@ public class ParagraphGenerator {
 		
 		//------------[config]------------
 		
-		int MaxLength = 5;
+		int MaxLength = 8;
 		int MinLength = 4;
-		int ParagraphLength = 2000;
+		int ParagraphLength = 200;
 					
 		//--------------------------------
 		

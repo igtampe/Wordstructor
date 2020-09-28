@@ -181,4 +181,9 @@ public class Letters {
 	 */
 	public static boolean isInitialized() {return Initialized;}
 	
+	public static Letter charToLetter(char Boop) {
+		for (Letter letter : ALL_LETTERS) {if(letter.GetChar()==Boop) {return letter;}}
+		return null;
+	}
+	
 }
